@@ -1,5 +1,6 @@
 
 import './App.css'
+import Hero from './components/Hero'
 
 function App() {
  
@@ -7,7 +8,8 @@ function App() {
   return (
     
     <div>
-        <h1>min portfolio</h1>
+      <Hero />
+         <section id="skills" style={{ height: "100vh", backgroundColor: "#003366" }}></section>
     </div>
   )
 }
