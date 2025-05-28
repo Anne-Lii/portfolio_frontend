@@ -1,6 +1,7 @@
 
 import './App.css'
 import Hero from './components/Hero'
+import ProjectsSubmarine from './components/ProjectSubmarine'
 import SkillsReef from './components/SkillsReef'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div>
       <Hero />
          <SkillsReef />
+         <ProjectsSubmarine />
     </div>
   )
 }
