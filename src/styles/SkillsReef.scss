@@ -1,0 +1,74 @@
+.skills-reef {
+ 
+  padding: 4rem 2rem;
+  color: white;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #00e6e6;
+  }
+
+  .skill-category {
+    margin-bottom: 3rem;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #00e6e6;
+
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+  }
+
+ .skill-bubble {
+  background: radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.4), rgba(0, 150, 255, 0.2));
+  border: 1px solid rgba(0, 191, 255, 0.5);
+  padding: 1rem 1.5rem;
+  border-radius: 999px; // extra rund!
+  box-shadow: inset 0 0 10px #00bfff33, 0 0 12px #00bfff55;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  min-width: 120px;
+  max-width: 220px;
+  text-align: center;
+
+  strong {
+    font-size: 1.1rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    display: block;
+    line-height: 1.4;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    background: radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.5), rgba(0, 150, 255, 0.3));
+    box-shadow: 0 0 20px #00ffff88, inset 0 0 5px #00e6e644;
+  }
+}
+
+}
+
+/* Smaller screns */
+@media (max-width: 600px) {
+  .skill-bubble {
+    min-width: 120px;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.25rem;
+  }
+}

@@ -1,6 +1,7 @@
 
 import './App.css'
 import Hero from './components/Hero'
+import SkillsReef from './components/SkillsReef'
 
 function App() {
  
@@ -9,7 +10,7 @@ function App() {
     
     <div>
       <Hero />
-         <section id="skills" style={{ height: "100vh", backgroundColor: "#003366" }}></section>
+         <SkillsReef />
     </div>
   )
 }
