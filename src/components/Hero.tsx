@@ -1,9 +1,17 @@
 import { motion } from "framer-motion";
 import "../styles/Hero.scss";
+import { useEffect } from "react";
 
 const Hero = () => {
+
+    useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
     return (
+
+
         <section className="hero-section">
+
             {/* Bubbles */}
             <div className="bubbles">
                 <span className="bubble bubble-1"></span>
@@ -19,6 +27,7 @@ const Hero = () => {
             </div>
             <div className="wreck"></div>
 
+
             {/* content */}
             <motion.div
                 className="hero-content"
@@ -28,7 +37,7 @@ const Hero = () => {
             >
                 <h1>Jag är Anne-Lii</h1>
                 <p>
-                    Fullstackutvecklare med passion för backend, valar och vilda idéer.
+                    Fullstackutvecklare med passion för backend, valar, havet och vilda idéer.
                     Jag bygger digitala världar där API:er simmar fritt!
                 </p>
                 <motion.button
@@ -42,7 +51,21 @@ const Hero = () => {
                     Dyk ner ↓
                 </motion.button>
             </motion.div>
+            <div className="github-chest-wrapper">
+                <a
+                    href="https://github.com/Anne-Lii"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-chest"
+                    aria-label="Öppna min GitHub-skatt"
+                >
+                    <img className="chest-img" src="/chest.png" alt="Skattkista" />
+                    <img className="github-img" src="/github-mark-white.png" alt="GitHub-logga" />
+                    <span>GitHub-skatt</span>
+                </a>
+            </div>
         </section>
+
     );
 };
 

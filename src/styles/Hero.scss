@@ -2,7 +2,7 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background:transparent;
+    background: transparent;
     color: white;
     display: flex;
     justify-content: center;
@@ -81,6 +81,7 @@
         }
     }
 
+
     //BUBBLES
 
     .bubbles {
@@ -135,6 +136,68 @@
             animation: rise5 13s infinite linear;
         }
     }
+
+
+    //treasure chest
+    .github-chest-wrapper {
+        position: absolute;
+        bottom: 100px;
+        left: 5%;
+        z-index: 3;
+
+        .github-chest {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            width: 120px;
+
+            img {
+                width: 100%;
+                height: auto;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            .github-img {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .chest-img {
+                animation: bounceChest 4s ease-in-out infinite;
+            }
+
+            span {
+                margin-top: 0.5rem;
+                color: gold;
+                font-size: 0.9rem;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover {
+                .chest-img {
+                    opacity: 0;
+                    transform: scale(1.1) rotate(-3deg);
+                }
+
+                .github-img {
+                    opacity: 1;
+                    transform: scale(1.05);
+                    filter: drop-shadow(0 0 10px white);
+                }
+
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+
+
 }
 
 //ANIMATIONS
@@ -167,76 +230,113 @@
 
 //Bubbles moving up
 @keyframes rise1 {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 0.4;
-  }
-  50% {
-    transform: translateY(-500px) translateX(-20px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-1000px) translateX(0);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(-500px) translateX(-20px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000px) translateX(0);
+        opacity: 0;
+    }
 }
 
 @keyframes rise2 {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateY(-600px) translateX(15px);
-    opacity: 0.9;
-  }
-  100% {
-    transform: translateY(-1000px) translateX(0);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateY(-600px) translateX(15px);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(-1000px) translateX(0);
+        opacity: 0;
+    }
 }
 
 @keyframes rise3 {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translateY(-400px) translateX(-10px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-900px) translateX(0);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-400px) translateX(-10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-900px) translateX(0);
+        opacity: 0;
+    }
 }
 
 @keyframes rise4 {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 0.2;
-  }
-  50% {
-    transform: translateY(-700px) translateX(25px);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(-1100px) translateX(0);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: translateY(-700px) translateX(25px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-1100px) translateX(0);
+        opacity: 0;
+    }
 }
 
 @keyframes rise5 {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateY(-550px) translateX(-15px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-1000px) translateX(0);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateY(-550px) translateX(-15px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000px) translateX(0);
+        opacity: 0;
+    }
+}
+
+//treasure chest to Github
+@keyframes shakeChest {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(3deg);
+    }
+
+    40% {
+        transform: rotate(-3deg);
+    }
+
+    60% {
+        transform: rotate(2deg);
+    }
+
+    80% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }

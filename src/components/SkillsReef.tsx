@@ -26,29 +26,24 @@ const SkillsReef = () => {
     return (
         <section className="skills-reef" id="skills">
             <h2>🪸 Mina färdigheter</h2>
-            {["Frontend", "Backend", "Databases", "Tools", "CMS", "Other"].map((category) => (
-                <div key={category} className="skill-category">
-                    <h3>{category}</h3>
-                    <div className="skills-list">
-                        {skills
-                            .filter((skill) => skill.category === category)
-                            .map((skill, index) => (
-                                <motion.div
-
-                                    key={skill.name}
-                                    className="skill-bubble"
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: index * 0.1 }}
-
-                                >
-                                    <strong aria-label={`Skill: ${skill.name}`}>{skill.name}</strong>
-                                </motion.div>
-                            ))}
-                    </div>
-                </div>
-            ))}
-
+            {["Frontend", "Backend", "Databases", "Tools", "CMS", "Other"].map((category, index) => (
+  <motion.div
+    key={category}
+    className="skill-bubble grouped"
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: index * 0.2 }}
+  >
+    <strong>{category}</strong>
+    <ul>
+      {skills
+        .filter((skill) => skill.category === category)
+        .map((skill) => (
+          <li key={skill.name}>{skill.name}</li>
+        ))}
+    </ul>
+  </motion.div>
+))}
         </section>
     );
 };
